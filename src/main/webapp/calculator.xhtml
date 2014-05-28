@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h1 align="center">Basic Calculator</h1>
+
+				<h:panelGrid colomn="5">
+					
+					<h:inputText id="first" value="#{calculatorManagedBean.a}" />
+					<h:selectOneMenu value="#{calculatorManagedBean}">
+					<f:selectItem itemLabel="+" itemValue="+"/>
+					<f:selectItem itemLabel="-" itemValue="-"/>
+					<f:selectItem itemLabel="*" itemValue="*"/>
+					<f:selectItem itemLabel="/" itemValue="/"/>
+					</h:selectOneMenu>
+					<h:inputText id="second" value="#{calculatorManagedBean.b}" />
+					<h:commandButton action="#{calculatorManagedBean.}" value="=" name="=" />
+					
+					<h:outputText value="#{calculatorManagedBean} />
+					
+				</h:panelGrid>
+			
+</body> 
+</html>
