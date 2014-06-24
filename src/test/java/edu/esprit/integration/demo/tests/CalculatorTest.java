@@ -1,13 +1,17 @@
 package edu.esprit.integration.demo.tests;
 
-import org.junit.Test;
-
+import org.junit.*;
 import edu.esprit.integration.demo.services.CalculatorService;
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
 	
 	private CalculatorService calc;
+	@Before
+    public void setUp(){
+        calc = new CalculatorService();
+    }
+
 	@Test
 	public void shouldReturnSix(){
 		assertEquals(6, calc.soustraction(7, 1));

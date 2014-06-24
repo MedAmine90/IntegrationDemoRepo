@@ -198,8 +198,24 @@
             <artifactId>arquillian-protocol-servlet</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+			<groupId>org.codehaus.sonar</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>4.3</version>
+		</dependency>
+	
+		
 
     </dependencies>
+    <distributionManagement>
+
+        <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+    </distributionManagement>
 
     <build>
         <!-- Maven will append the version to the finalName (which is the name 
